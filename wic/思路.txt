@@ -1,0 +1,44 @@
+1、超链接
+
+2、点击超链接，出现，图片列表
+
+3、关于图片列表
+   初始，是隐藏：display:none
+   点击后，显示：display:block
+   none / block 通过js来改变 调用了slideToggle()
+
+********************************************
+***********显示隐藏图片列表************
+********************************************
+
+$(".btn").click(function(){
+		$(".baidu").slideToggle();//隐藏元素显示
+	});
+
+
+$(".btn")  超链接按钮
+click  点击
+
+$(".baidu")  图片列表div
+
+slideToggle()  //隐藏元素显示
+
+
+********************************************
+*************改变背景图片******************
+********************************************
+
+$(".dimg_list ul li").click(function(){
+		var src = $(this).find("img").attr("dataSrc");//获取图片路径
+		$("body").css({"background":"url("+src+")","background-size":"cover"});//改变body背景图片
+	});
+
+
+
+$(".dimg_list ul li")  获得图片对象
+
+click  点击事件
+
+var src = $(this).find("img").attr("dataSrc");//获取图片路径
+
+$("body").css({"background":"url("+src+")","background-size":"cover"});//改变body背景图片
